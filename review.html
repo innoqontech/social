@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&family=Koulen&family=Padauk&family=Rubik+Microbe&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<style>
+   *{
+       margin: 0;
+       padding:0;
+       /* font-family: 'Times New Roman', Times, serif; */
+       font-family:'UBUNTU';
+
+   }
+
+   .review{
+       margin: 50px auto;
+   }
+   .review h1{
+       text-align: center;
+       font-weight: bold;
+       font-size: 30px;
+       color:#2A93D5;
+       padding-bottom: 10px;
+       text-transform: uppercase;
+   }
+   a{
+       text-decoration: none;
+   }
+   #reviews{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     width: 100%;
+     
+   }
+   .reviews-heading{
+       letter-spacing: 1px;
+       margin: 30px 0px;
+       padding: 10px 20px;
+       display: flex;
+       flex-direction: column;
+       justify-content:center;
+       align-items: center;
+   }
+   .reviews-heading h1{
+       font-size: 2.2rem;
+       font-weight: 500;
+       background-color: #1CA7EC;
+       color: #ffffff;
+       padding: 10px;
+   }
+   .reviews-heading span{
+       font-size: 1.3rem;
+       color: #365775;
+       margin-bottom: 10px;
+       letter-spacing: 2px;
+       text-transform: uppercase;
+   }
+   .reviews-box-container{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       width: 100%;
+   }
+   .reviews-box{
+       width: 500px;
+       box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+       background-color: #ffffff;
+       padding: 20px;
+       margin: 15px;
+       cursor: pointer;
+       border-radius: 10px;
+   }
+   .profile-img{
+       width: 50px;
+       height: 50px;
+       border-radius: 50%;
+       overflow: hidden;
+       margin-right: 10px;
+   }
+   .profile-img img{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       object-position: center;
+   }
+   .profile{
+       display: flex;
+       align-items: center;
+   }
+   
+   .logo{
+       width: 30px;
+       height: 30px;
+       border-radius: 80%;
+       overflow: hidden;
+       margin-right: 10px;
+       position: relative;
+       left:90%;
+       bottom: 50px;
+   }
+   .logo img{
+    width: 100%;
+       height: 100%;
+       object-fit: cover;
+       object-position: center;
+   }
+   .user-name{
+    display: flex;
+    flex-direction: column;
+}
+.user-name strong{
+    color: #1CA7EC;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.user-name span{
+    color: rgb(93, 92, 92);
+    font-size:0.8rem;
+}
+.reviews{
+    color:#f9d71c ;
+}
+/* .box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+} */
+
+.client-comments p{
+    font-size: 0.9rem;
+    color:#4b4b4b;
+}
+.reviews-box:hover{
+    transform: translateY(-8px);
+    transition: all ease 0.3s;
+    border: 1px solid black;
+    box-shadow: 2px 4px 4px;
+}
+.line{
+    content: '';
+     background:#1CA7EC;
+     display: block;
+     height: 3px;
+     width: 100%;
+     margin: 10px auto 1px;
+   
+}
+#footer{
+    background: rgb(243, 243, 243);
+    border-radius:5px ;
+    color: rgb(107, 106, 106);
+    height: 100vh;
+}
+.innoq{
+    color: #1CA7EC;
+}
+.product{
+    margin-top: 30px;
+   position: relative;
+   left: 70%;
+   color: #1CA7EC;
+}
+.pro-li{
+   margin-left: 30px;
+   position: relative;
+   left: 50%;
+
+}
+
+.service{
+    margin-top: 30px;
+   position: relative;
+   left: 100%;
+   color: #1CA7EC;
+}
+.serv-li{
+   position: relative;
+   left: 100%;
+}
+.follow{
+    display: flex;
+}
+.follow a:hover img{
+    transform: translateY(-10px);
+}
+.twitter img{
+    width:40px;
+    margin: 12px;
+    border: 1px solid black;
+    border-radius:10px;
+}
+.twitter img :hover{
+    width:40px;
+    margin: 12px;
+}
+.facebook img{
+    width:30px;
+    margin: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.instagram img{
+    width: 30px;
+    margin: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
+.linkdein img{
+    width: 30px;
+    margin: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.policy{
+    color: rgb(107, 106, 106);
+    position: relative;
+    left: 80%;
+}
+.copyright{
+    display: flex;
+    margin: 20px;
+}
+.copyright p{
+    position: absolute;
+    bottom: -490%;
+}
+.pro-li a{
+    text-decoration: none;
+    color: rgb(107, 106, 106);
+}
+.pro-li a:hover{
+   color: #1CA7EC;
+}
+.serv-li a{
+    color: rgb(107, 106, 106);
+}
+.serv-li a:hover{
+    color: #1CA7EC;
+}
+@media (max-width: 576px) {
+
+    #footer{
+        overflow: auto;
+        position: relative;
+        width:100%;
+    
+    }
+    .product-sec h3{
+        position: absolute;
+        left:5px;
+        margin: 0;
+    }
+
+    .pro-li{
+        position: absolute;
+        left: 0%;
+        top:260px;
+        margin: 0;
+    }
+    .service-sec{
+        position: relative;
+        right: 95%;
+        top:92px;
+    }
+    .follow-sec{
+        position: absolute;
+        bottom:40px;
+    }
+    .copyright{
+        position: relative;
+
+    }
+    .rights{
+        position: absolute;
+        top: 200px;
+        right:30%;
+    }
+    .policy{
+        position: absolute;
+        top: 200px;
+    }
+
+}
+
+
+</style>
+<body>
+   <section id="reviews">
+       <div class="reviews-heading">
+           <span>Comments</span>
+           <h1>Clients Says</h1>
+       </div>
+
+       <div class="reviews-box-container">
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/twitter.jpg" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            The best thing about supersourcing is that agencies don't have to find suitable projects and bid for different projects. The concept of domain expertise is really good. It increases an agency's chances to get more work in your domain which you are an expert.
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/twitter.jpg" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            Totally agree, Supersourcing we have seen surge in 100X demand,
+            Support from supersourcing team is awesome. Both Aarambhi and Twinkle stay in touch and support all the time.
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/twitter.jpg" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star-half"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            I really like the dashboard UI and UX. The left menu is organized in a very nice manner which is easy to access.
+             I like the proper agency verification process too.
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/instagram.jfif" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            Totally agree, Supersourcing we have seen surge in 100X demand,
+            Support from supersourcing team is awesome. Both Aarambhi and Twinkle stay in touch and support all the time.
+        </div>
+          </div>
+        
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/facebook.jfif" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star-half"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            Really quick response in case of services and support. The quality of the agency is really great and also the vendors suggested is top notch.
+        </div>
+          </div>
+        
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/twitter.jpg" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            Supersourcing has the best pool of agencies across the globe. It is super-efficient, feasible and the most flexible platform to find the perfect match for your project. It has a unique matchmaking algorithm that matches you with your perfect agency match. The experience so far has been overwhelming.
+        </div>
+          </div>
+        
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/linkdein.png" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            Firstly, the platform is not charging any subscription, and the Supersourcing team is proactive and they are always on their toes to connect us with the right agencies.
+        </div>
+          </div>
+        
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/facebook.jfif" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            It was really great help by Aarambhi to understand platform. She explained me importance of profile for getting work. I am really excited to use it as it transparent and not extra commission to pay like other freelance platforms charges. I guess, it is free until we haven't any income from Supersourcing.
+        </div>
+          </div>
+        
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/instagram.jfif" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            I liked the professional attitude of the person, who introduced me to Supersourcing on their standard introductory call. I like the look'n'feel of the website and some clever sections, such as FAQ. I also like that you get the public profile easily and that anybody can access it.
+        </div>
+          </div>
+        
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/linkdein.png" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            The platform has no bidding system, the client shortlist the candidate and they can directly connect for further details.
+            The customer service call with Sakshi helped me understand the in and out of the system.
+        </div>
+          </div>
+        
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/linkdein.png" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            The information I received on the demo call was completely satisfactory and I am amazed to know the motive of SuperSourcing that they're a startup helping other startups. Aarambhi was extremely frank and fully transparent to share all the details regarding the process of projects.
+
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/instagram.jfif" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            1. Easy onboarding process.
+            2. Getting projects from serious clientele.
+            3. Having option to integrate with the client and under the reason behind the rejection.
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/facebook.jfif" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            - Quick and easy on-boarding process with great customer service
+            - No bidding, so not always low price wins,
+            - Platform believes that Quality comes at their optimal price
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/twitter.jpg" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            There are many good things from Supersourcing.
+            1. Support from supersourcing team is awesome.
+            2. User Friendly UI
+            3.Most but not No bidding.
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/instagram.jfif" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            I am impressed with the onboarding experience and execution of checks for authenticity before an agency is onboarded into a specific domain.
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/facebook.jfif" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            There are many good things from Supersourcing.
+            1. Support from supersourcing team is awesome.
+            2. User Friendly UI
+            3.Most but not No bidding.
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/facebook.jfif" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            * Simple and quick platform
+* Great support from the Super sourcing team to understand the platform
+* There is no bidding and third party commission
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/twitter.jpg" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            Verification with each of company/individuals that is best. The presentation present is very good.
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/twitter.jpg" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            Good platform to connect software development agencies to prospective clients. They verify the agency credentials before onboarding them on the platform.
+        </div>
+          </div>
+           <!-- BOX 1 -->
+           <div class="reviews-box">
+               <!-- top -->
+           <div class="box-top">
+            <!-- profile -->
+            <div class="profile">
+               <div class="profile-img">
+                <img src="images/user1.jpg" alt="">
+               </div>
+               <div class="user-name">
+                   <strong>Angelena John</strong>
+                   <span>@angelena john</span>
+               </div>
+            </div> 
+            <div class="logo">
+                <img src="images2/linkdein.png" alt="">
+            </div>
+
+               <div class="reviews">
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+                 <i class="fa fa-star"></i>
+               </div>
+           </div>
+           <div class="client-comments">
+            Good platform to connect software development agencies to prospective clients. They verify the agency credentials before onboarding them on the platform.
+        </div>
+          </div>
+   </section>
+
+   <div class="line">
+       
+   </div>
+
+   <footer id="footer">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+         <div class="logo"></div>
+         <h3 class="innoq">Innoqontech</h3>
+         <p>If you're a new Entrepreneur or idea Stage company, Innoqontech helps you find a talent partner to build MVP at a fixed price. If you're a funded company, Innoqontech helps you hire Engineers on a monthly contract.</p>
+          </div>
+          <div class="col-sm product-sec">
+            <h3 class="product">Product</h3>
+            <ul class="pro-li">
+              <a href="#"><li>About Us</li></a> 
+               <a href="#"> <li>Careers</li></a>
+                <a href="#"><li>Blogs</li></a>
+            </ul>
+        </div>
+          <div class="col-sm service-sec">
+              <h3 class="service">Services</h3>
+              <ul class="serv-li">
+                 <a href="#"><li>Web Development</li></a> 
+                 <a href="#"> <li>App Development</li></a>
+                 <a href="#"> <li>UI/UX Design</li></a>
+                  <a href="#"><li>CMS Development</li></a>
+                  <a href="#"><li>Database Development</li></a>
+                 <a href="#"> <li>Cloud-Server Management</li></a>
+                  
+              </ul>
+            
+        </div>
+          <div class="col-sm">
+        </div>
+      </div>
+      <div class="follow-sec">
+      <h4>Follow Us On</h4>
+      <div class="follow">
+          <div class="twitter">
+             <a href="#"><img src="images2/twitter.jpg" alt=""></a> 
+          </div>
+          <div class="facebook">
+             <a href="#"> <img src="images2/facebook.jfif" alt=""></a>
+          </div>
+          <div class="instagram">
+             <a href="#"> <img src="images2/instagram.jfif" alt=""></a>
+          </div>
+          <div class="linkdein">
+              <a href="#"><img src="images2/linkdein.png" alt=""></a>
+          </div>
+      </div>
+    </div>
+      
+      <div class="copyright">
+       <p class="rights">&#169 2022 InNoQonTech, Inc. All rights reserved</p>
+       <p class="policy"><a href="#">Privacy Policy</a></p>
+      </div>
+   </footer>
+    
+</body>
+</html>
