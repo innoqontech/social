@@ -27,7 +27,7 @@
     <!-- Navbar section  -->
     <header class="header_wrapper">
       <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+        <div class="container-fluid px-5">
           <a class="navbar-brand" href="#">
             <img src="" alt="logo" />
           </a>
@@ -55,15 +55,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-semibold text-light" href="#pricing"
+                <a class="nav-link fw-semibold text-light ms-3" href="#pricing"
                   >Pricing</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-semibold text-light" href="#blog">Blog</a>
+                <a class="nav-link fw-semibold text-light ms-3" href="#blog">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-semibold text-light" href="#company"
+                <a class="nav-link fw-semibold text-light ms-3" href="#company"
                   >Company</a
                 >
               </li>
@@ -73,7 +73,7 @@
               <div><a href="" class="button">Start your free trial</a></div>
               <div><a href="" class="button-2">Request Demo</a></div>
               <div>
-                <a href="" class="login-btn text-white">
+                <a href="" class="login-btn text-white fw-semibold">
                   <img src="icons/user.png" alt="" class="me-2">
                  Login
                     </a>
@@ -129,7 +129,7 @@
                   <input
                     type="text"
                     id="form3Example3"
-                    class="form-control rounded-pill"
+                    class="form-control rounded"
                     placeholder="Ex: xyz"
                     required
                   />
@@ -145,7 +145,7 @@
                   <input
                     type="email"
                     id="form3Example3"
-                    class="form-control rounded-pill"
+                    class="form-control rounded"
                     placeholder="Email"
                     required
                   />
@@ -164,14 +164,14 @@
 
                   <select
                     id="form3Example3"
-                    class="form-control rounded-pill custom-list"
+                    class="form-control rounded custom-list"
                     placeholder="Ex: xyz"
                     required
                   >
-                    <option value="volvo">E-commerce</option>
-                    <option value="saab">Education</option>
-                    <option value="fiat">Health & Beauty</option>
-                    <option value="audi">Marketing</option>
+                    <option value="E-commerce">E-commerce</option>
+                    <option value="Education">Education</option>
+                    <option value="Health&Beauty">Health & Beauty</option>
+                    <option value="Marketing">Marketing</option>
                   </select>
                 </div>
 
@@ -185,7 +185,7 @@
                   <input
                     type="tel"
                     id="form3Example3"
-                    class="form-control rounded-pill"
+                    class="form-control rounded"
                     placeholder="Phone"
                     required
                   />
@@ -200,7 +200,7 @@
                 <input
                   type="text"
                   id="form3Example3"
-                  class="form-control rounded-pill"
+                  class="form-control rounded"
                   placeholder="Company Name"
                   required
                 />
@@ -214,7 +214,7 @@
                 <input
                   type="text"
                   id="form3Example3"
-                  class="form-control rounded-pill"
+                  class="form-control rounded"
                   placeholder="Your Answer.."
                   required
                 />
@@ -242,7 +242,7 @@
               <div class="text-lg-start mt-4 pt-2">
                 <button
                   type="button"
-                  class="custom-btn-color w-25 rounded-pill py-2 border-0 text-light"
+                  class="custom-btn-color w-25 rounded py-2 border-0 text-light"
                 >
                   Submit
                 </button>
@@ -257,59 +257,66 @@
     </section>
 
     <!-- footer  -->
-    <footer class="footer px-5">
-      <div class="row py-5">
+    <footer class="footer p-5 ">
+      <div class="row">
         <div class="col">
           <a href="" class="text-decoration-none"><img src="LOGO" /></a>
           <!--  image paste here  -->
         </div>
         <div class="col">
-          <h6>PRODUCT</h6>
-          <div>
+          <h6 class="pb-3">PRODUCT</h6>
+          <div class="pb-1">
+            <a href="" class="text-decoration-none fw-semibold">Facebook</a>
+          </div>
+          <div class="pb-1">
             <a href="" class="text-decoration-none fw-semibold">Instagram</a>
           </div>
-          <div>
+          <div class="pb-1">
+            <a href="" class="text-decoration-none fw-semibold">Website</a>
+          </div>
+          <div class="pb-1">
             <a href="" class="text-decoration-none fw-semibold">Pricing</a>
           </div>
-          <div>
-            <a href="" class="text-decoration-none fw-semibold"
-              >Start your free trial</a
-            >
-          </div>
-          <div>
+          <div class="pb-1">
             <a href="" class="text-decoration-none fw-semibold">Request Demo</a>
           </div>
+          <div class="pb-4">
+            <a href="" class="text-decoration-none fw-semibold"
+              >Start free trial</a
+            >
+          </div>
         </div>
         <div class="col">
-          <h6>SUPPORT</h6>
-          <div>
+          <h6 class="pb-3">SUPPORT</h6>
+          <div class="pb-1">
             <a href="" class="text-decoration-none fw-semibold">Blog</a>
           </div>
-          <div>
-            <a href="" class="text-decoration-none fw-semibold">Help center</a>
+          <div class="pb-1">
+            <a href="" class="text-decoration-none fw-semibold">Help Center</a>
           </div>
-          <div>
+          <div class="pb-1">
             <a href="" class="text-decoration-none fw-semibold">Status</a>
           </div>
-          <div>
+          <div class="pb-4">
             <a href="" class="text-decoration-none fw-semibold">Community</a>
           </div>
+
         </div>
         <div class="col">
-          <h6>COMPANY</h6>
-          <div>
+          <h6 class="pb-3">COMPANY</h6>
+          <div class="pb-1">
             <a href="" class="text-decoration-none fw-semibold">About us</a>
           </div>
-          <div>
-            <a href="" class="text-decoration-none fw-semibold">Careers</a>
+          <div class="pb-5">
+            <a href="" class="text-decoration-none fw-semibold">Career</a>
           </div>
         </div>
       </div>
       <hr />
-      <div class="row">
+      <div class="row pt-3">
         <div class="col-3">
           <p class="fw-semibold">
-            &copy 2022 innoQon Tech Pvt. Ltd. All Rights Reserved.
+            &copy 2022 innoQon Tech Pvt. Ltd.
           </p>
         </div>
         <div class="col-6 d-flex">
@@ -317,13 +324,19 @@
             <a href="" class="text-decoration-none fw-semibold">Terms of Use</a>
           </div>
           <div>
-            <a href="" class="text-decoration-none fw-semibold ms-3"
+            <a href="" class="text-decoration-none fw-semibold ms-4"
               >Privacy Policy</a
+            >
+          </div>
+          <div>
+            <a href="" class="text-decoration-none fw-semibold ms-4"
+              >GDPR</a
             >
           </div>
         </div>
 
         <!-- social handles  -->
+
         <div class="col-3 d-flex gap-3 align-items-center">
          <a href=""><img src="icons/fb.png" alt=""></a>
          <a href=""><img src="icons/twitter.png" alt=""></a>
